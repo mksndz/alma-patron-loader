@@ -8,8 +8,10 @@ class InstitutionTest < MiniTest::Test
     @university = Institution.new :university
   end
 
-  def test_loads
-    assert @college
-    assert @university
+  def test_has_config
+    assert_kind_of InstitutionConfig, @college.config
   end
+
+
+
 end
